@@ -1,0 +1,7 @@
+{
+	"appId": "com.aparajita.capacitor.darkmodedemo",
+	"appName": "Dark Mode",
+	"loggingBehavior": "debug",
+	"webDir": "dist",
+	"plugins": {}
+}
