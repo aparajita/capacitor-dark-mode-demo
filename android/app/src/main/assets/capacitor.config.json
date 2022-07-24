@@ -3,8 +3,5 @@
 	"appName": "Dark Mode",
 	"loggingBehavior": "debug",
 	"webDir": "dist",
-	"plugins": {},
-	"server": {
-		"url": "http://192.168.0.131:8100"
-	}
+	"plugins": {}
 }
