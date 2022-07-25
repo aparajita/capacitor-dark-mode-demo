@@ -28,7 +28,7 @@ if (localStorage.getItem('syncStatusBar') === null) {
   setSyncStatusBarPref(true)
 }
 
-DarkMode.configure({
+DarkMode.init({
   getter: getAppearancePref,
   syncStatusBar: getSyncStatusBarPref()
 }).catch(console.error)

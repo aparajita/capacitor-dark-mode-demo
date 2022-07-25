@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@aparajita/capacitor-dark-mode': ^1.0.0
+  '@aparajita/capacitor-dark-mode': ^1.1.0
   '@aparajita/eslint-config-vue': ^1.0.5
   '@aparajita/prettier-config': ^1.0.0
   '@aparajita/tailwind-ionic': ^1.1.0
@@ -46,7 +46,7 @@ specifiers:
   vue-tsc: ~0.38.9
 
 dependencies:
-  '@aparajita/capacitor-dark-mode': 1.0.0_@capacitor+core@3.6.0
+  '@aparajita/capacitor-dark-mode': 1.1.0_@capacitor+core@3.6.0
   '@capacitor/android': 3.6.0_@capacitor+core@3.6.0
   '@capacitor/app': 1.1.1_@capacitor+core@3.6.0
   '@capacitor/core': 3.6.0
@@ -94,21 +94,21 @@ devDependencies:
 
 packages:
 
-  /@aparajita/capacitor-dark-mode/1.0.0_@capacitor+core@3.6.0:
-    resolution: {integrity: sha512-vOTfJqxKbbO+zqQUv98D7vafLqmFwOJ9qrIXIYBt5zTzrA4KORnadqzdVJ7s1+qUU4cWD7czNNxf1jCyZKWA4A==}
+  /@aparajita/capacitor-dark-mode/1.1.0_@capacitor+core@3.6.0:
+    resolution: {integrity: sha512-JbjK8jTiVZdJG5hJpVmWVqScAIUx9PURijnMU5vEzyPoLmgxm360uiPWPuQjmMkmMK30/uI1/1uHDncviqXnbg==}
     engines: {node: '>=16.15.1'}
     peerDependencies:
       '@capacitor/core': ^3.6.0
     dependencies:
-      '@aparajita/capacitor-native-decorator': 2.0.7
+      '@aparajita/capacitor-native-decorator': 2.0.8
       '@capacitor/android': 3.6.0_@capacitor+core@3.6.0
       '@capacitor/core': 3.6.0
       '@capacitor/ios': 3.6.0_@capacitor+core@3.6.0
       '@capacitor/status-bar': 1.0.8_@capacitor+core@3.6.0
     dev: false
 
-  /@aparajita/capacitor-native-decorator/2.0.7:
-    resolution: {integrity: sha512-ycfQNjCCxisKYmOadYuYP9ckXQefsPnrTlY5YKABhb7aEXMF+piMIaw3Z1wawQy2CbYYGuZHTQd4wz6Z8Ejv2Q==}
+  /@aparajita/capacitor-native-decorator/2.0.8:
+    resolution: {integrity: sha512-0U/Wn35PuGyvlLZcsWX5Wb+v1RQgOg8l5D3ARQIskXCVfYAoOAiFPOXHUBuwcLk7Geb2AffMxybk8VZZO52QeA==}
     engines: {node: '>=16.15.1'}
     hasBin: true
     dependencies:
