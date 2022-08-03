@@ -12,22 +12,20 @@
   "bugs": "https://github.com/aparajita/capacitor-dark-mode-demo/issues",
   "scripts": {
     "dev": "vite",
-    "build": "pnpm check.fix && pnpm builder",
+    "build": "pnpm -s check.fix && pnpm -s builder",
     "builder": "vite build",
     "preview": "vite preview --port 1327",
-    "lint": "eslint --cache . && pnpm typecheck",
-    "lint.fix": "eslint --cache --fix . && pnpm typecheck",
-    "typecheck": "vue-tsc --noEmit",
-    "prettier": "prettier --check .",
-    "prettier.fix": "prettier --check --write .",
-    "check": "pnpm lint && pnpm prettier && echo '\u001b[32m✔︎\u001b[0mAll good!'",
-    "check.fix": "pnpm lint.fix && pnpm prettier.fix && echo '\u001b[32m✔︎\u001b[0mAll good!'",
+    "lint.eslint": "eslint --cache --fix .",
+    "lint.prettier": "prettier --cache --write --list-different .",
+    "lint.tsc": "vue-tsc --noEmit",
+    "lint": "pnpm -s lint.eslint && pnpm -s lint.prettier && pnpm -s lint.tsc",
     "ios.dev": "ionic cap run ios --open --livereload --external",
     "ios.prod": "ionic cap run ios --open",
     "android.dev": "ionic cap run android --open --livereload --external",
     "android.prod": "ionic cap run android --open",
     "ionic:build": "vite build",
-    "ionic:serve": "vite"
+    "ionic:serve": "vite",
+    "release": "commit-and-tag-version"
   },
   "dependencies": {
     "@aparajita/capacitor-dark-mode": "^2.0.0",
@@ -73,6 +71,7 @@
     "terser": "^5.14.2",
     "typescript": "~4.7.4",
     "vite": "3.0.2",
+    "ultra-runner": "^3.10.5",
     "vue-eslint-parser": "^9.0.3",
     "vue-tsc": "~0.38.9"
   }
