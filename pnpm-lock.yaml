@@ -2,7 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@aparajita/capacitor-dark-mode': ^2.0.0
-  '@aparajita/eslint-config-vue': link:../eslint-config-vue
+  '@aparajita/eslint-config-vue': ^1.0.6
   '@aparajita/prettier-config': ^1.0.0
   '@aparajita/tailwind-ionic': ^1.1.0
   '@capacitor/android': ^4.0.1
@@ -64,7 +64,7 @@ dependencies:
   vue-router: 4.1.3_vue@3.2.37
 
 devDependencies:
-  '@aparajita/eslint-config-vue': link:../eslint-config-vue
+  '@aparajita/eslint-config-vue': 1.0.6_qvzkjuoad3vvdbebmj5l2nbc5y
   '@aparajita/prettier-config': 1.0.0_prettier@2.7.1
   '@aparajita/tailwind-ionic': 1.1.0_3q6vylji3pmuga247geope5usm
   '@capacitor/cli': 4.0.1
@@ -120,6 +120,61 @@ packages:
       '@capacitor/core': 4.0.1
       tslib: 2.4.0
     dev: false
+
+  /@aparajita/eslint-config-base/1.1.5_2k3v2axkvbt6ak5y732q4vaone:
+    resolution: {integrity: sha512-n8ry3mtZMz6BGGzpTCDNXLvuisYq4QBp70DuVQUAUmJ80oRxEM4+rygCEne+exMpZkt8m33UOppmNjGt3nNZ9w==}
+    peerDependencies:
+      '@typescript-eslint/eslint-plugin': '>=5.29.0'
+      '@typescript-eslint/parser': '>=5.29.0'
+      eslint: '>=8.18.0'
+      eslint-config-standard: '>=17.0.0'
+      eslint-import-resolver-typescript: '>=3.1.1'
+      eslint-plugin-import: '>=2.26.0'
+      eslint-plugin-n: '>=15.2.3'
+      eslint-plugin-promise: '>=6.0.0'
+      typescript: '>=4.7.4'
+    dependencies:
+      '@typescript-eslint/eslint-plugin': 5.32.0_iosr3hrei2tubxveewluhu5lhy
+      '@typescript-eslint/parser': 5.32.0_qugx7qdu5zevzvxaiqyxfiwquq
+      eslint: 8.21.0
+      eslint-config-standard: 17.0.0_dfwa53o44x4e5xhsfv5mvfhk5a
+      eslint-import-resolver-typescript: 3.4.0_jatgrcxl4x7ywe7ak6cnjca2ae
+      eslint-plugin-import: 2.26.0_klqlxqqxnpnfpttri4irupweri
+      eslint-plugin-n: 15.2.4_eslint@8.21.0
+      eslint-plugin-promise: 6.0.0_eslint@8.21.0
+      typescript: 4.7.4
+    dev: true
+
+  /@aparajita/eslint-config-vue/1.0.6_qvzkjuoad3vvdbebmj5l2nbc5y:
+    resolution: {integrity: sha512-KctiL4pYPaEXjZvTUhVQk9HkC6csEwjvYOZm+6vaAcU+mUuu+14i+0GiLXbwHnLuMSlS04hUEntaPTge5f1Tvw==}
+    peerDependencies:
+      '@typescript-eslint/eslint-plugin': '>=5.30.0'
+      '@typescript-eslint/parser': '>=5.30.0'
+      eslint: '>=8'
+      eslint-config-prettier: '>=8.5.0'
+      eslint-config-standard: '>=17.0.0'
+      eslint-import-resolver-typescript: '>=3.1.1'
+      eslint-plugin-import: '>=2.26.0'
+      eslint-plugin-n: '>=15.2.3'
+      eslint-plugin-promise: '>=6.0.0'
+      eslint-plugin-vue: '>=9.1.1'
+      typescript: '>=4.7.4'
+      vue-eslint-parser: '>=9.0.3'
+    dependencies:
+      '@aparajita/eslint-config-base': 1.1.5_2k3v2axkvbt6ak5y732q4vaone
+      '@typescript-eslint/eslint-plugin': 5.32.0_iosr3hrei2tubxveewluhu5lhy
+      '@typescript-eslint/parser': 5.32.0_qugx7qdu5zevzvxaiqyxfiwquq
+      eslint: 8.21.0
+      eslint-config-prettier: 8.5.0_eslint@8.21.0
+      eslint-config-standard: 17.0.0_dfwa53o44x4e5xhsfv5mvfhk5a
+      eslint-import-resolver-typescript: 3.4.0_jatgrcxl4x7ywe7ak6cnjca2ae
+      eslint-plugin-import: 2.26.0_klqlxqqxnpnfpttri4irupweri
+      eslint-plugin-n: 15.2.4_eslint@8.21.0
+      eslint-plugin-promise: 6.0.0_eslint@8.21.0
+      eslint-plugin-vue: 9.3.0_eslint@8.21.0
+      typescript: 4.7.4
+      vue-eslint-parser: 9.0.3_eslint@8.21.0
+    dev: true
 
   /@aparajita/prettier-config/1.0.0_prettier@2.7.1:
     resolution: {integrity: sha512-sfcqj+y1vvP57SrrnbyaDCtM8FUVG2ioEwCJIIWf/gB9ZXRl09ZljmJygPaIdGapMkDwOhmill7Ys5jIM4jfdw==}
