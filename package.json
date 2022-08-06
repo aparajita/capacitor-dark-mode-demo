@@ -12,8 +12,9 @@
   "bugs": "https://github.com/aparajita/capacitor-dark-mode-demo/issues",
   "scripts": {
     "dev": "vite",
-    "build": "pnpm -s check.fix && pnpm -s builder",
-    "builder": "vite build",
+    "build": "pnpm -s builder",
+    "build.dev": "SOURCE_MAP=--sourcemap pnpm -s builder",
+    "builder": "vite build ${SOURCE_MAP}",
     "preview": "vite preview --port 1327",
     "lint.eslint": "eslint --cache --fix .",
     "lint.prettier": "prettier --cache --write --list-different .",
@@ -28,7 +29,7 @@
     "release": "commit-and-tag-version"
   },
   "dependencies": {
-    "@aparajita/capacitor-dark-mode": "^2.0.2",
+    "@aparajita/capacitor-dark-mode": "^2.1.0",
     "@capacitor/android": "^4.0.1",
     "@capacitor/app": "^4.0.1",
     "@capacitor/core": "^4.0.1",

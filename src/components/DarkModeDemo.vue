@@ -82,15 +82,13 @@ async function showAlert(message: string): Promise<void> {
 }
 
 onMounted(async () => {
-  appearanceListenerHandle = await DarkMode.addAppearanceListener(
-    ({ dark }) => {
-      showAlert(`System dark mode is ${dark ? 'on' : 'off'}.`).catch(
-        console.error
-      )
-    }
-  )
+  appearanceListenerHandle = DarkMode.addAppearanceListener(({ dark }) => {
+    showAlert(`System dark mode is ${dark ? 'on' : 'off'}.`).catch(
+      console.error
+    )
+  })
 
-  const storedAppearance = await getAppearancePref()
+  const storedAppearance = getAppearancePref()
 
   if (storedAppearance) {
     appearance.value = storedAppearance
