@@ -1,5 +1,5 @@
 import type { DarkModeGetterResult } from '@aparajita/capacitor-dark-mode'
-import { DarkMode, DarkModeAppearance } from '@aparajita/capacitor-dark-mode'
+import { DarkModeAppearance } from '@aparajita/capacitor-dark-mode'
 
 export function getAppearancePref(): DarkModeGetterResult {
   const item = localStorage.getItem('appearance')
@@ -27,8 +27,3 @@ export function setSyncStatusBarPref(syncStatusBar: boolean): void {
 if (localStorage.getItem('syncStatusBar') === null) {
   setSyncStatusBarPref(true)
 }
-
-DarkMode.init({
-  getter: getAppearancePref,
-  syncStatusBar: getSyncStatusBarPref()
-}).catch(console.error)

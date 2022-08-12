@@ -1,7 +1,7 @@
 [
 	{
 		"pkg": "@aparajita/capacitor-dark-mode",
-		"classpath": "com.aparajita.capacitor.darkmode.DarkMode"
+		"classpath": "com.aparajita.capacitor.darkmode.DarkModeNative"
 	},
 	{
 		"pkg": "@capacitor/app",

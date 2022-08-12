@@ -64,7 +64,7 @@ import {
   getSyncStatusBarPref,
   setAppearancePref,
   setSyncStatusBarPref
-} from '@/dark-mode'
+} from '@/prefs'
 
 const isAndroid = Capacitor.getPlatform() === 'android'
 const syncStatusBar = ref(getSyncStatusBarPref())
@@ -82,11 +82,13 @@ async function showAlert(message: string): Promise<void> {
 }
 
 onMounted(async () => {
-  appearanceListenerHandle = DarkMode.addAppearanceListener(({ dark }) => {
-    showAlert(`System dark mode is ${dark ? 'on' : 'off'}.`).catch(
-      console.error
-    )
-  })
+  appearanceListenerHandle = await DarkMode.addAppearanceListener(
+    ({ dark }) => {
+      showAlert(`System dark mode is ${dark ? 'on' : 'off'}.`).catch(
+        console.error
+      )
+    }
+  )
 
   const storedAppearance = getAppearancePref()
 
@@ -103,7 +105,7 @@ onUnmounted(() => {
 
 async function onSyncStatusBarChange(): Promise<void> {
   setSyncStatusBarPref(syncStatusBar.value)
-  await DarkMode.configure({ syncStatusBar: syncStatusBar.value })
+  await DarkMode.init({ syncStatusBar: syncStatusBar.value })
 }
 
 async function updateAppearance(): Promise<void> {
