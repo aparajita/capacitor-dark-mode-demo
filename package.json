@@ -12,21 +12,21 @@
   "bugs": "https://github.com/aparajita/capacitor-dark-mode-demo/issues",
   "scripts": {
     "dev": "vite",
-    "build": "pnpm -s builder",
-    "build.dev": "SOURCE_MAP=--sourcemap pnpm -s builder",
-    "builder": "vite build ${SOURCE_MAP}",
+    "prebuild": "pnpm lint",
+    "build": "vite build",
     "preview": "vite preview --port 1327",
-    "lint.eslint": "eslint --cache --fix .",
+    "lint.eslint": "eslint --cache --fix --ext js,mjs,ts,vue .",
     "lint.prettier": "prettier --cache --write --list-different .",
     "lint.tsc": "vue-tsc --noEmit",
-    "lint": "pnpm -s lint.eslint && pnpm -s lint.prettier && pnpm -s lint.tsc",
+    "lint": "pnpm lint.eslint && pnpm lint.prettier && pnpm lint.tsc",
     "ios.dev": "ionic cap run ios --open --livereload --external",
     "ios.prod": "ionic cap run ios --open",
     "android.dev": "ionic cap run android --open --livereload --external",
     "android.prod": "ionic cap run android --open",
     "ionic:build": "vite build",
     "ionic:serve": "vite",
-    "release": "commit-and-tag-version"
+    "prerelease": "pnpm build",
+    "release": "commit-and-tag-version && git push --follow-tags"
   },
   "dependencies": {
     "@aparajita/capacitor-dark-mode": "^2.1.0",
@@ -72,7 +72,6 @@
     "tailwindcss": "^3.1.8",
     "terser": "^5.14.2",
     "typescript": "~4.7.4",
-    "ultra-runner": "^3.10.5",
     "vite": "^3.0.4",
     "vue-eslint-parser": "^9.0.3",
     "vue-tsc": "~0.39.4"
