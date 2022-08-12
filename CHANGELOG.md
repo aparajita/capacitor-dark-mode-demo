@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+### [2.0.2](https://github.com/aparajita/capacitor-dark-mode-demo/compare/v2.0.1...v2.0.2) (2022-08-12)
+
+
+### Refactoring
+
+* ditch ultra-runner, use pnpm as runner ([466663d](https://github.com/aparajita/capacitor-dark-mode-demo/commit/466663da6cb0ed53e6ebc21516ee5107c7d6157d))
+* modify for latest plugin ([c63fc77](https://github.com/aparajita/capacitor-dark-mode-demo/commit/c63fc7724a496b581730d58448f6318e6513af4e))
+
 ### [2.0.1](https://github.com/aparajita/capacitor-dark-mode-demo/compare/v2.0.0...v2.0.1) (2022-08-06)
 
 
