@@ -1,14 +1,5 @@
 <template>
   <ion-list>
-    <ion-item v-if="isAndroid">
-      <ion-label>Sync status bar</ion-label>
-      <ion-checkbox
-        slot="start"
-        v-model="syncStatusBar"
-        @ion-change="onSyncStatusBarChange"
-      ></ion-checkbox>
-    </ion-item>
-
     <ion-radio-group
       v-model="appearance"
       @ion-change="updateAppearance"
@@ -41,6 +32,40 @@
         ></ion-radio>
       </ion-item>
     </ion-radio-group>
+
+    <ion-radio-group
+      v-if="isAndroid"
+      v-model="syncStatusBar"
+      @ion-change="onSyncStatusBarChange"
+    >
+      <ion-list-header>
+        <ion-label>Sync status bar</ion-label>
+      </ion-list-header>
+
+      <ion-item>
+        <ion-label>Yes</ion-label>
+        <ion-radio
+          slot="start"
+          :value="true"
+        ></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>No</ion-label>
+        <ion-radio
+          slot="start"
+          :value="false"
+        ></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Text only</ion-label>
+        <ion-radio
+          slot="start"
+          value="textOnly"
+        ></ion-radio>
+      </ion-item>
+    </ion-radio-group>
   </ion-list>
 </template>
 
@@ -50,7 +75,6 @@ import { DarkMode, DarkModeAppearance } from '@aparajita/capacitor-dark-mode'
 import { Capacitor } from '@capacitor/core'
 import {
   alertController,
-  IonCheckbox,
   IonItem,
   IonLabel,
   IonList,
