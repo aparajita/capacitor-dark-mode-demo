@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [2.1.0](https://github.com/aparajita/capacitor-dark-mode-demo/compare/v2.0.3...v2.1.0) (2022-12-27)
+
+
+### Features
+
+* support ‘textOnly’ syncStatusBar option ([e833fae](https://github.com/aparajita/capacitor-dark-mode-demo/commit/e833faec4fe4e47a11800e19c2ad5a4ebee3af37))
+
+
+### Maintenance
+
+* update deps ([27fce3e](https://github.com/aparajita/capacitor-dark-mode-demo/commit/27fce3e4e1c09bccc26b8c70f7e04453f11d27d6))
+
 ### [2.0.3](https://github.com/aparajita/capacitor-dark-mode-demo/compare/v2.0.2...v2.0.3) (2022-10-03)
 
 
