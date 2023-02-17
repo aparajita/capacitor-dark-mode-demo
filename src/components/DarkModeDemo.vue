@@ -9,7 +9,6 @@
         <ion-select
           v-model="appearance"
           interface="popover"
-          @ion-change="updateAppearance"
         >
           <ion-select-option :value="DarkModeAppearance.system">
             System
@@ -89,21 +88,21 @@
 </template>
 
 <script setup lang="ts">
-import type {
-  DarkModeListenerData,
-  DarkModeListenerHandle,
-  DarkModeOptions,
-  StatusBarStyleGetterResult
-} from '@aparajita/capacitor-dark-mode'
 import {
-  appearanceToStyle,
   DarkMode,
   DarkModeAppearance,
   isDarkColor,
   isValidHexColor
 } from '@aparajita/capacitor-dark-mode'
+import type {
+  DarkModeListenerData,
+  DarkModeListenerHandle,
+  DarkModeOptions,
+  StatusBarStyleGetterResult,
+  DarkModeSyncStatusBar
+} from '@aparajita/capacitor-dark-mode'
 import { Capacitor } from '@capacitor/core'
-import { Style, StatusBar } from '@capacitor/status-bar'
+import { StatusBar, Style } from '@capacitor/status-bar'
 import {
   alertController,
   IonCheckbox,
@@ -115,22 +114,23 @@ import {
   IonSelect,
   IonSelectOption
 } from '@ionic/vue'
-import { onBeforeMount, onMounted, onUnmounted, ref } from 'vue'
-import {
-  getAppearancePref,
-  getSyncStatusBarPref,
-  setAppearancePref,
-  setSyncStatusBarPref
-} from '@/prefs'
+import { useLocalStorage } from '@vueuse/core'
+import { onMounted, onUnmounted, ref, watch } from 'vue'
 
 /* eslint-disable @typescript-eslint/no-magic-numbers */
 const isAndroid = Capacitor.getPlatform() === 'android'
-const syncStatusBar = ref(getSyncStatusBarPref())
+// const syncStatusBar = ref(getSyncStatusBarPref())
 const lightStatusBarColor = ref('#011c55')
 const darkStatusBarColor = ref('#ccffc0')
-const appearance = ref<DarkModeAppearance>(DarkModeAppearance.system)
+const appearance = useLocalStorage<DarkModeAppearance>(
+  'dark-mode',
+  DarkModeAppearance.system
+)
+const syncStatusBar = useLocalStorage<DarkModeSyncStatusBar>(
+  'sync-status-bar',
+  true
+)
 const disableTransitions = ref(true)
-const isDark = ref(false)
 const useCustomStatusBarBackground = ref(false)
 const useCustomStyleGetter = ref(false)
 const kStatusBarBackgroundVariable = '--statusBarBackground'
@@ -148,6 +148,10 @@ async function showAlert(message: string): Promise<void> {
 
 function getDarkModeConfig(): DarkModeOptions {
   return {
+    getter: () => appearance.value,
+    setter: (newAppearance: DarkModeAppearance): void => {
+      appearance.value = newAppearance
+    },
     syncStatusBar: syncStatusBar.value,
     statusBarBackgroundVariable: useCustomStatusBarBackground.value
       ? kStatusBarBackgroundVariable
@@ -157,18 +161,13 @@ function getDarkModeConfig(): DarkModeOptions {
   }
 }
 
-onBeforeMount(async () => {
-  isDark.value = (await DarkMode.isDarkMode()).dark
-  await DarkMode.configure(getDarkModeConfig())
-})
-
 onMounted(async () => {
   appearanceListenerHandle = await DarkMode.addAppearanceListener(
     (data: DarkModeListenerData) => {
       // eslint-disable-next-line @typescript-eslint/padding-line-between-statements
       ;(async (): Promise<void> => {
-        isDark.value = data.dark
-        const style = statusBarStyle(appearanceToStyle(appearance.value))
+        console.log('appearance listener', data)
+        const style = statusBarStyle(data.dark ? Style.Light : Style.Dark)
 
         if (style) {
           await StatusBar.setStyle({ style })
@@ -179,13 +178,7 @@ onMounted(async () => {
     }
   )
 
-  const storedAppearance = getAppearancePref()
-
-  if (storedAppearance) {
-    appearance.value = storedAppearance
-  }
-
-  await DarkMode.update()
+  await DarkMode.configure(getDarkModeConfig())
 })
 
 onUnmounted(() => {
@@ -216,14 +209,13 @@ async function onColorChange(color: string): Promise<void> {
 }
 
 async function onConfigChange(): Promise<void> {
-  setSyncStatusBarPref(syncStatusBar.value)
   await DarkMode.configure(getDarkModeConfig())
 }
 
-async function updateAppearance(): Promise<void> {
-  setAppearancePref(appearance.value)
+watch(appearance, async () => {
+  console.log('appearance changed', appearance.value)
   await DarkMode.update()
-}
+})
 </script>
 
 <style>
