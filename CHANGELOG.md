@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [2.2.1](https://github.com/aparajita/capacitor-dark-mode-demo/compare/v2.2.0...v2.2.1) (2023-02-17)
+
+
+### Maintenance
+
+* fix ts config ([70cff44](https://github.com/aparajita/capacitor-dark-mode-demo/commit/70cff44717595b8e6f2de9c441e06ddafe04ad58))
+* update deps, code tweaks ([48edb15](https://github.com/aparajita/capacitor-dark-mode-demo/commit/48edb152afb80d725c62c3233afb53d93b338699))
+
 ## [2.2.0](https://github.com/aparajita/capacitor-dark-mode-demo/compare/v2.1.0...v2.2.0) (2023-02-10)
 
 
