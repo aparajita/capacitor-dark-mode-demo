@@ -24,5 +24,7 @@ if (!isPlatform('android')) {
 }
 
 const app = createApp(App).use(IonicVue, config).use(router)
-await router.isReady()
-app.mount('#app')
+router
+  .isReady()
+  .then(() => app.mount('#app'))
+  .catch(console.error)
