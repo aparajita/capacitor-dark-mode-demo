@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [3.0.0](https://github.com/aparajita/capacitor-dark-mode-demo/compare/v2.0.3...v3.0.0) (2023-06-16)
+
+
+### ⚠ BREAKING CHANGES
+
+* The app now requires Ionic 7 and Capacitor 5.
+
+### Features
+
+* upgrade to Ionic 7 and Capacitor 5 ([1e771ef](https://github.com/aparajita/capacitor-dark-mode-demo/commit/1e771efd2e1c91ea5007a89b5dd965a02c54c73d))
+
 ### [2.0.3](https://github.com/aparajita/capacitor-dark-mode-demo/compare/v2.0.2...v2.0.3) (2022-10-03)
 
 
