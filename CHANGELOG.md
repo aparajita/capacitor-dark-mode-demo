@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [3.0.0](https://github.com/aparajita/capacitor-dark-mode-demo/compare/v2.2.1...v3.0.0) (2023-06-16)
+
+
+### ⚠ BREAKING CHANGES
+
+* The app requires Ionic 7 (and thus iOS 14) and Capacitor 5.
+
+### Features
+
+* upgrade to Ionic 7 and Capacitor 5 ([08c00c3](https://github.com/aparajita/capacitor-dark-mode-demo/commit/08c00c389de62b4f3ff8fc4459f16b00d76d434f))
+
+
+### Maintenance
+
+* can’t use top level await ([ee572d3](https://github.com/aparajita/capacitor-dark-mode-demo/commit/ee572d3cb86be54af3940a32743afb312e66838a))
+
 ## [2.2.1](https://github.com/aparajita/capacitor-dark-mode-demo/compare/v2.2.0...v2.2.1) (2023-02-17)
 
 
