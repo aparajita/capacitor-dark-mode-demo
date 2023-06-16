@@ -17,7 +17,6 @@ import '@ionic/vue/css/structure.css'
 import '@ionic/vue/css/padding.css'
 
 import './theme/variables.css'
-import './assets/css/styles.pcss'
 import { getAppearancePref, getSyncStatusBarPref } from '@/prefs'
 
 const config: Record<string, unknown> = {}

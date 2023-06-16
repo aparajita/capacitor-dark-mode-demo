@@ -4,6 +4,9 @@ const config: CapacitorConfig = {
   appId: 'com.aparajita.capacitor.darkmodedemo',
   appName: 'Dark Mode',
   loggingBehavior: 'debug',
+  server: {
+    androidScheme: 'http'
+  },
   webDir: 'dist',
   plugins: {}
 }

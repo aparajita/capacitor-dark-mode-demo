@@ -1,12 +1,17 @@
 <template>
   <ion-list>
-    <ion-item v-if="isAndroid">
-      <ion-label>Sync status bar</ion-label>
+    <ion-item
+      v-if="isAndroid"
+      lines="full"
+    >
       <ion-checkbox
         slot="start"
         v-model="syncStatusBar"
+        label-placement="end"
         @ion-change="onSyncStatusBarChange"
-      ></ion-checkbox>
+      >
+        Sync status bar
+      </ion-checkbox>
     </ion-item>
 
     <ion-radio-group
@@ -17,28 +22,34 @@
         <ion-label>Appearance</ion-label>
       </ion-list-header>
 
-      <ion-item>
-        <ion-label>System</ion-label>
+      <ion-item lines="full">
         <ion-radio
           slot="start"
+          label-placement="end"
           :value="DarkModeAppearance.system"
-        ></ion-radio>
+        >
+          System
+        </ion-radio>
       </ion-item>
 
-      <ion-item>
-        <ion-label>Light</ion-label>
+      <ion-item lines="full">
         <ion-radio
           slot="start"
+          label-placement="end"
           :value="DarkModeAppearance.light"
-        ></ion-radio>
+        >
+          Light
+        </ion-radio>
       </ion-item>
 
-      <ion-item>
-        <ion-label>Dark</ion-label>
+      <ion-item lines="full">
         <ion-radio
           slot="start"
+          label-placement="end"
           :value="DarkModeAppearance.dark"
-        ></ion-radio>
+        >
+          Dark
+        </ion-radio>
       </ion-item>
     </ion-radio-group>
   </ion-list>
