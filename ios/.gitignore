@@ -4,8 +4,8 @@
 
 App/build
 App/Pods
+App/output
 App/App/public
-App/Podfile.lock
 DerivedData
 xcuserdata
 
