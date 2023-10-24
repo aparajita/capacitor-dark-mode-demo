@@ -20,7 +20,7 @@ import {
   IonHeader,
   IonPage,
   IonTitle,
-  IonToolbar
+  IonToolbar,
 } from '@ionic/vue'
 import DarkModeDemo from '@/components/DarkModeDemo.vue'
 </script>

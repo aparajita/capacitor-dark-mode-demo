@@ -2,6 +2,7 @@ import { DarkMode } from '@aparajita/capacitor-dark-mode'
 import { IonicVue, isPlatform } from '@ionic/vue'
 import { createApp } from 'vue'
 import App from './App.vue'
+import { getAppearancePref, getSyncStatusBarPref } from '@/prefs'
 // eslint-disable-next-line import/order
 import router from './router'
 
@@ -12,12 +13,10 @@ import '@ionic/vue/css/core.css'
 import '@ionic/vue/css/normalize.css'
 import '@ionic/vue/css/structure.css'
 // import '@ionic/vue/css/typography.css'
-
 /* Optional CSS utils that can be commented out */
 import '@ionic/vue/css/padding.css'
 
 import './theme/variables.css'
-import { getAppearancePref, getSyncStatusBarPref } from '@/prefs'
 
 const config: Record<string, unknown> = {}
 
@@ -32,7 +31,7 @@ router
   .then(() => {
     DarkMode.init({
       getter: getAppearancePref,
-      syncStatusBar: getSyncStatusBarPref()
+      syncStatusBar: getSyncStatusBarPref(),
     })
       .then(() => {
         app.mount('#app')

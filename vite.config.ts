@@ -6,14 +6,14 @@ export default defineConfig(() => {
   return {
     build: {
       sourcemap: process.env.NODE_ENV !== 'production',
-      target: 'es2020'
+      target: 'es2020',
     },
     plugins: [vue()],
     resolve: {
       alias: {
         // eslint-disable-next-line @typescript-eslint/naming-convention
-        '@': fileURLToPath(new URL('./src', import.meta.url))
-      }
-    }
+        '@': fileURLToPath(new URL('./src', import.meta.url)),
+      },
+    },
   }
 })

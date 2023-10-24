@@ -5,10 +5,10 @@ const config: CapacitorConfig = {
   appName: 'Dark Mode',
   loggingBehavior: 'debug',
   server: {
-    androidScheme: 'http'
+    androidScheme: 'http',
   },
   webDir: 'dist',
-  plugins: {}
+  plugins: {},
 }
 
 export default config
