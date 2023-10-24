@@ -1,17 +1,40 @@
 <template>
   <ion-list>
+    <ion-list-header v-if="isAndroid">
+      <ion-label>Sync</ion-label>
+    </ion-list-header>
+
     <ion-item
       v-if="isAndroid"
       lines="full"
     >
-      <ion-checkbox
-        slot="start"
+      <ion-radio-group
         v-model="syncStatusBar"
-        label-placement="end"
+        style="display: flex; flex-direction: column"
         @ion-change="onSyncStatusBarChange"
       >
-        Sync status bar
-      </ion-checkbox>
+        <ion-radio
+          :value="false"
+          label-placement="end"
+          style="width: fit-content"
+        >
+          Off
+        </ion-radio>
+        <ion-radio
+          :value="true"
+          label-placement="end"
+          style="width: fit-content"
+        >
+          Everything
+        </ion-radio>
+        <ion-radio
+          value="textOnly"
+          label-placement="end"
+          style="width: fit-content"
+        >
+          Text only
+        </ion-radio>
+      </ion-radio-group>
     </ion-item>
 
     <ion-radio-group
@@ -56,29 +79,31 @@
 </template>
 
 <script setup lang="ts">
-import type { DarkModeListenerHandle } from '@aparajita/capacitor-dark-mode'
+import type {
+  DarkModeListenerHandle,
+  DarkModeSyncStatusBar,
+} from '@aparajita/capacitor-dark-mode'
 import { DarkMode, DarkModeAppearance } from '@aparajita/capacitor-dark-mode'
 import { Capacitor } from '@capacitor/core'
 import {
   alertController,
-  IonCheckbox,
   IonItem,
   IonLabel,
   IonList,
   IonListHeader,
   IonRadio,
-  IonRadioGroup
+  IonRadioGroup,
 } from '@ionic/vue'
 import { onMounted, onUnmounted, ref } from 'vue'
 import {
   getAppearancePref,
   getSyncStatusBarPref,
   setAppearancePref,
-  setSyncStatusBarPref
+  setSyncStatusBarPref,
 } from '@/prefs'
 
 const isAndroid = Capacitor.getPlatform() === 'android'
-const syncStatusBar = ref(getSyncStatusBarPref())
+const syncStatusBar = ref<DarkModeSyncStatusBar>(getSyncStatusBarPref())
 const appearance = ref(DarkModeAppearance.system)
 let appearanceListenerHandle: DarkModeListenerHandle | null = null
 
@@ -87,7 +112,7 @@ async function showAlert(message: string): Promise<void> {
     header: `Appearance change:`,
     subHeader: '',
     message,
-    buttons: ['OK']
+    buttons: ['OK'],
   })
   await alert.present()
 }
@@ -96,9 +121,9 @@ onMounted(async () => {
   appearanceListenerHandle = await DarkMode.addAppearanceListener(
     ({ dark }) => {
       showAlert(`System dark mode is ${dark ? 'on' : 'off'}.`).catch(
-        console.error
+        console.error,
       )
-    }
+    },
   )
 
   const storedAppearance = getAppearancePref()
@@ -116,7 +141,7 @@ onUnmounted(() => {
 
 async function onSyncStatusBarChange(): Promise<void> {
   setSyncStatusBarPref(syncStatusBar.value)
-  await DarkMode.init({ syncStatusBar: syncStatusBar.value })
+  await DarkMode.configure({ syncStatusBar: syncStatusBar.value })
 }
 
 async function updateAppearance(): Promise<void> {
