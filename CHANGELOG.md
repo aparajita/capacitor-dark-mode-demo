@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [4.1.0](https://github.com/aparajita/capacitor-dark-mode-demo/compare/v4.0.0...v4.1.0) (2024-04-21)
+
+
+### Features
+
+* update to Capacitor 6 / Ionic 8 ([5bcdb83](https://github.com/aparajita/capacitor-dark-mode-demo/commit/5bcdb838914b0f45d5adecbeec20d6cd241223cd))
+
+
+### Maintenance
+
+* update linting config ([d1c3b53](https://github.com/aparajita/capacitor-dark-mode-demo/commit/d1c3b53701020fe6e7cd28a395485702c7578766))
+* update vite config for vite 5 ([332462a](https://github.com/aparajita/capacitor-dark-mode-demo/commit/332462a0e6e099c6149ef73cb4c47c40c17ffd13))
+
 ## [4.0.0](https://github.com/aparajita/capacitor-dark-mode-demo/compare/v2.2.1...v4.0.0) (2023-10-24)
 
 
