@@ -6,5 +6,13 @@
 		"androidScheme": "http"
 	},
 	"webDir": "dist",
-	"plugins": {}
+	"plugins": {},
+	"packageClassList": [
+		"DarkModeNative",
+		"DarkModeNative",
+		"AppPlugin",
+		"HapticsPlugin",
+		"KeyboardPlugin",
+		"StatusBarPlugin"
+	]
 }

@@ -49,6 +49,7 @@
         <ion-radio
           slot="start"
           label-placement="end"
+          justify="start"
           :value="DarkModeAppearance.system"
         >
           System
@@ -59,6 +60,7 @@
         <ion-radio
           slot="start"
           label-placement="end"
+          justify="start"
           :value="DarkModeAppearance.light"
         >
           Light
@@ -69,6 +71,7 @@
         <ion-radio
           slot="start"
           label-placement="end"
+          justify="start"
           :value="DarkModeAppearance.dark"
         >
           Dark
