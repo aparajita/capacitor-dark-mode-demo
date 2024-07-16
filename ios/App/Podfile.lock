@@ -1,52 +1,52 @@
 PODS:
-  - AparajitaCapacitorDarkMode (5.0.1):
+  - AparajitaCapacitorDarkMode (5.0.2):
     - Capacitor
-  - Capacitor (6.0.0):
+  - Capacitor (6.1.0):
     - CapacitorCordova
   - CapacitorApp (6.0.0):
     - Capacitor
-  - CapacitorCordova (6.0.0)
+  - CapacitorCordova (6.1.0)
   - CapacitorHaptics (6.0.0):
     - Capacitor
-  - CapacitorKeyboard (6.0.0):
+  - CapacitorKeyboard (6.0.1):
     - Capacitor
   - CapacitorStatusBar (6.0.0):
     - Capacitor
 
 DEPENDENCIES:
-  - "AparajitaCapacitorDarkMode (from `../../node_modules/.pnpm/@aparajita+capacitor-dark-mode@5.0.1/node_modules/@aparajita/capacitor-dark-mode`)"
-  - "Capacitor (from `../../node_modules/.pnpm/@capacitor+ios@6.0.0_@capacitor+core@6.0.0/node_modules/@capacitor/ios`)"
-  - "CapacitorApp (from `../../node_modules/.pnpm/@capacitor+app@6.0.0_@capacitor+core@6.0.0/node_modules/@capacitor/app`)"
-  - "CapacitorCordova (from `../../node_modules/.pnpm/@capacitor+ios@6.0.0_@capacitor+core@6.0.0/node_modules/@capacitor/ios`)"
-  - "CapacitorHaptics (from `../../node_modules/.pnpm/@capacitor+haptics@6.0.0_@capacitor+core@6.0.0/node_modules/@capacitor/haptics`)"
-  - "CapacitorKeyboard (from `../../node_modules/.pnpm/@capacitor+keyboard@6.0.0_@capacitor+core@6.0.0/node_modules/@capacitor/keyboard`)"
-  - "CapacitorStatusBar (from `../../node_modules/.pnpm/@capacitor+status-bar@6.0.0_@capacitor+core@6.0.0/node_modules/@capacitor/status-bar`)"
+  - "AparajitaCapacitorDarkMode (from `../../node_modules/.pnpm/@aparajita+capacitor-dark-mode@5.0.2/node_modules/@aparajita/capacitor-dark-mode`)"
+  - "Capacitor (from `../../node_modules/.pnpm/@capacitor+ios@6.1.0_@capacitor+core@6.1.0/node_modules/@capacitor/ios`)"
+  - "CapacitorApp (from `../../node_modules/.pnpm/@capacitor+app@6.0.0_@capacitor+core@6.1.0/node_modules/@capacitor/app`)"
+  - "CapacitorCordova (from `../../node_modules/.pnpm/@capacitor+ios@6.1.0_@capacitor+core@6.1.0/node_modules/@capacitor/ios`)"
+  - "CapacitorHaptics (from `../../node_modules/.pnpm/@capacitor+haptics@6.0.0_@capacitor+core@6.1.0/node_modules/@capacitor/haptics`)"
+  - "CapacitorKeyboard (from `../../node_modules/.pnpm/@capacitor+keyboard@6.0.1_@capacitor+core@6.1.0/node_modules/@capacitor/keyboard`)"
+  - "CapacitorStatusBar (from `../../node_modules/.pnpm/@capacitor+status-bar@6.0.0_@capacitor+core@6.1.0/node_modules/@capacitor/status-bar`)"
 
 EXTERNAL SOURCES:
   AparajitaCapacitorDarkMode:
-    :path: "../../node_modules/.pnpm/@aparajita+capacitor-dark-mode@5.0.1/node_modules/@aparajita/capacitor-dark-mode"
+    :path: "../../node_modules/.pnpm/@aparajita+capacitor-dark-mode@5.0.2/node_modules/@aparajita/capacitor-dark-mode"
   Capacitor:
-    :path: "../../node_modules/.pnpm/@capacitor+ios@6.0.0_@capacitor+core@6.0.0/node_modules/@capacitor/ios"
+    :path: "../../node_modules/.pnpm/@capacitor+ios@6.1.0_@capacitor+core@6.1.0/node_modules/@capacitor/ios"
   CapacitorApp:
-    :path: "../../node_modules/.pnpm/@capacitor+app@6.0.0_@capacitor+core@6.0.0/node_modules/@capacitor/app"
+    :path: "../../node_modules/.pnpm/@capacitor+app@6.0.0_@capacitor+core@6.1.0/node_modules/@capacitor/app"
   CapacitorCordova:
-    :path: "../../node_modules/.pnpm/@capacitor+ios@6.0.0_@capacitor+core@6.0.0/node_modules/@capacitor/ios"
+    :path: "../../node_modules/.pnpm/@capacitor+ios@6.1.0_@capacitor+core@6.1.0/node_modules/@capacitor/ios"
   CapacitorHaptics:
-    :path: "../../node_modules/.pnpm/@capacitor+haptics@6.0.0_@capacitor+core@6.0.0/node_modules/@capacitor/haptics"
+    :path: "../../node_modules/.pnpm/@capacitor+haptics@6.0.0_@capacitor+core@6.1.0/node_modules/@capacitor/haptics"
   CapacitorKeyboard:
-    :path: "../../node_modules/.pnpm/@capacitor+keyboard@6.0.0_@capacitor+core@6.0.0/node_modules/@capacitor/keyboard"
+    :path: "../../node_modules/.pnpm/@capacitor+keyboard@6.0.1_@capacitor+core@6.1.0/node_modules/@capacitor/keyboard"
   CapacitorStatusBar:
-    :path: "../../node_modules/.pnpm/@capacitor+status-bar@6.0.0_@capacitor+core@6.0.0/node_modules/@capacitor/status-bar"
+    :path: "../../node_modules/.pnpm/@capacitor+status-bar@6.0.0_@capacitor+core@6.1.0/node_modules/@capacitor/status-bar"
 
 SPEC CHECKSUMS:
-  AparajitaCapacitorDarkMode: 01c1c60c0b330fe1113f68ee09c5857776edd24c
-  Capacitor: 559d073c4ca6c27f8e7002c807eea94c3ba435a9
+  AparajitaCapacitorDarkMode: 28e1819fcd1859686171eca38e121015826d22d6
+  Capacitor: 187bd7847b6f71467015a20200a1a071be3e5f14
   CapacitorApp: 9d53aec7101f7b030a950c5bdc4df8612576b279
-  CapacitorCordova: 8c4bfdf69368512e85b1d8b724dd7546abeb30af
+  CapacitorCordova: be703980ca797f847c3356f78fa175d21c8330c2
   CapacitorHaptics: 9ebc9363f0e9b8eb4295088a0b474530acf1859b
-  CapacitorKeyboard: deacbd09d8d1029c3681197fb05d206b721d5f73
+  CapacitorKeyboard: 5f32a712adf41e07a61caafb82cf29fb6d8ba123
   CapacitorStatusBar: 2e4369f99166125435641b1908d05f561eaba6f6
 
-PODFILE CHECKSUM: 1c54bd0aefba48bba93d56ac5b97b55f89f87b53
+PODFILE CHECKSUM: fdadbe466422bc1e7f933608bcb2e11c3b72484f
 
 COCOAPODS: 1.15.2

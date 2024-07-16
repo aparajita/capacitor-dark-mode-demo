@@ -9,7 +9,6 @@
 	"plugins": {},
 	"packageClassList": [
 		"DarkModeNative",
-		"DarkModeNative",
 		"AppPlugin",
 		"HapticsPlugin",
 		"KeyboardPlugin",
